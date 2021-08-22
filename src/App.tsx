@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MyForm from './MyForm';
+import {render} from "@testing-library/react";
+
 
 export const App = () => {
   const [url, setUrl] = useState<string>('');
@@ -21,7 +24,7 @@ export const App = () => {
   return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
+          <MyForm />
           <p>URL:</p>
           <p>
             {url}
